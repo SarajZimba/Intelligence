@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformations</title>
+    <style>
+    .demo{
+        height: 300px;
+        width: 300px;
+        background-color: blue;
+
+        animation-name: myAnimation1;
+        animation-duration: 3s;
+        animation-iteration-count: 3;
+        animation-direction: alternate; /*ends with same color*/
+        animation-fill-mode: forwards; /*color does not get back to normal*/
+        animation-delay: 1s;
+        animation-timing-function: linear;
+
+    /* transformation: change in position, orientation, size, shape*/
+
+    /*translate - change in position
+        transform: translate(x-distance, y-distance);
+    */
+    /*transform: translate(100px, 100px);*/
+   
+
+    /* rotate - change in orientation  
+    */
+
+    /*transform:rotate(60deg);
+    transform: rotate(90deg);
+    transform:rotateX(180deg);
+    */
+
+      
+    
+    }
+    /*scale: change in size*/
+    /* transform: scale(0.8); */
+    /*transform: scaleY(2);*/
+    
+    
+    /*skew: changein shape
+     transform: skew(60deg, 60deg);
+       transform: skewX(60deg);
+        transform: skewY(60deg);
+        transform: skew(-60deg);
+     */
+        
+    .demo:hover{
+        /*transform:rotateX(90deg);*/
+       /* transform: scale(1.5) rotate(90deg) translate(50px, -50px) skew(-60deg);
+        transition: 3s ;*/
+        animation-play-state: paused;
+    }
+
+    @keyframes myAnimation{
+        from{
+            background-color: red;
+            border-radius: 50%;
+            margin-left: 100%;
+        }
+        to{
+            background-color: green;
+        }
+    }
+    @keyframes myAnimation1{
+        0%{
+            background-color: yellow;
+            transform: translate(100%);
+        }
+        25%{
+            background-color: green;
+            transform: translate(100%) rotate(180deg);
+        
+        }
+        50%{
+            background-color: red;
+            transform: translate(100%,100%) rotate(180deg);
+        }
+        75%{
+            background-color: pink;
+            transform: translate(0%,100%) rotate(180deg);
+        }
+        100%{
+            background-color: purple;
+        }
+    }
+    
+    .demo2{
+        height: 300px;
+        width: 300px;
+        background-color: green;
+        transform: translate(300px, 300px);
+    }
+</style>
+</head>
+<body>
+    <div class="demo">
+
+    </div>
+    <div class="demo2"></div>
+</body>
+</html>
