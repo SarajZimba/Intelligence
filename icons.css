@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.myIcons{
+    color: blue;
+    font-size: 48px !important;
+}
+
+.icondiv{
+    height:50px;
+    width:50px;
+}
